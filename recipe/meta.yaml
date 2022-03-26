@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-facebook" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: aa9807a0e3191828bff45cd27ca26485bab80811013cecdb2579753b49a310b3
+  sha256: f3b6c24458174453016129d28a97b3cbfcac486eb527152c583c14965ecea37a
 
 build:
   number: 0
