@@ -1,19 +1,18 @@
 {% set name = "apache-airflow-providers-facebook" %}
-{% set version = "2.2.1" %}
-
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://archive.apache.org/dist/airflow/providers/{{ name }}-{{ version }}.tar.gz
-  sha256: aa9807a0e3191828bff45cd27ca26485bab80811013cecdb2579753b49a310b3
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-facebook-{{ version }}.tar.gz
+  sha256: f3b6c24458174453016129d28a97b3cbfcac486eb527152c583c14965ecea37a
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -36,9 +35,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Facebook Ads for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-facebook package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-facebook/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
