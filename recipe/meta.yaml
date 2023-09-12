@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-facebook" %}
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-facebook-{{ version }}.tar.gz
-  sha256: 4dfbb9c5cbc51bc64fb7ac55aca0d98772dd325d2ba4ecf3bcaf8dea4801fd3d
+  sha256: da7055d97cb035a75c920fd310fd21c8a24cc6216fc631959cb9c5be17551e0a
 
 build:
   noarch: python
