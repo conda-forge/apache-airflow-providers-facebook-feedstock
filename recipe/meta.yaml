@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-facebook" %}
-{% set version = "3.9.0" %}
+{% set version = "3.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_facebook-{{ version }}.tar.gz
-  sha256: a53c4b12b6f50761caa423e1bc6fc4a3e9ee791d0b7c05b4ff583d132644d707
+  sha256: cae5d4c060c5f49b03cd31f1e25b32433a40d6b0975874f3d63c3a84b655faa5
 
 build:
   noarch: python
@@ -20,9 +20,10 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - facebook-business >=22.0.0
     - python >={{ python_min }}
     - apache-airflow >=2.11.0
-    - apache-airflow-providers-common-compat >=1.8.0
+    - apache-airflow-providers-common-compat >=1.10.1
     - facebook_business >=22.0.0
 
 test:
