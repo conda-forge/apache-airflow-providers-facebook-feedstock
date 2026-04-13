@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-facebook
-  version: "3.9.3"
+  version: "3.9.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_facebook-${{ version }}.tar.gz
-  sha256: 4a2e373aceec0a0b8b5dca6fde50fc0712e8b65e4af9c5dd6264bc61e1a6ada1
+  sha256: 9f4528add20e67d7cc9d590a09f536f8851f53127b5a9a0287334a90d9b7e271
 
 build:
   noarch: python
@@ -31,7 +31,9 @@ tests:
       imports:
         - airflow.providers.facebook
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
