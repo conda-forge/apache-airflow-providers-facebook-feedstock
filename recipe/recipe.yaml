@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-facebook
-  version: "3.9.5"
+  version: "3.9.6"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_facebook-${{ version }}.tar.gz
-  sha256: 55d69648fe7f1a6324fc1398bf032444c531ebc4dd7a867827740eebc5c6ae79
+  sha256: 8a7215635bbe9eebe77218c3a4d5d09cb2b1f5891c3ce6e9574af4e581d2021c
 
 build:
   noarch: python
